@@ -7,6 +7,11 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+  background-color: #fff;
+}
+.list-group-item {
+  border: 0px;
+  border-left: 16px solid;
 }
 button {
   position: fixed;
