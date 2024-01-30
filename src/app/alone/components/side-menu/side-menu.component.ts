@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 interface MenuItem {
   name: string;
@@ -6,9 +8,11 @@ interface MenuItem {
 }
 
 @Component({
-  selector: 'maps-side-menu',
+  standalone: true,
+  selector: 'side-menu',
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.css'],
+  imports: [CommonModule, RouterModule],
 })
 export class SideMenuComponent {
   public menuItems: MenuItem[] = [
@@ -27,6 +31,10 @@ export class SideMenuComponent {
     {
       name: 'Houses',
       route: '/maps/properties',
+    },
+    {
+      name: 'Alone Page',
+      route: '/alone',
     },
   ];
 }
